@@ -8,14 +8,14 @@ const flappyImg = new Image();
 flappyImg.src = 'assets/tai-bird.png';
 
 //Game constants
-const FLAP_SPEED = -5;
+const FLAP_SPEED = -4;
 const BIRD_WIDTH = 40;
 const BIRD_HEIGHT = 30;
 const PIPE_WIDTH = 50;
 const PIPE_GAP = 125;
 
 // Bird variables
-let birdX = 52;
+let birdX = 50;
 let birdY = 50;
 let birdVelocity = 0;
 let birdAcceleration = 0.1;
