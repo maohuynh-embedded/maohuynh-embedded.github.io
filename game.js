@@ -6,13 +6,13 @@ const gameContainer = document.getElementById('game-container');
 
 const flappyImg = new Image();
 flappyImg.src = 'assets/tai-bird.png';
-
+// flappyImg.src = 'assets/flappy_dunk.png';
 //Game constants
 const FLAP_SPEED = -4;
 const BIRD_WIDTH = 40;
 const BIRD_HEIGHT = 30;
 const PIPE_WIDTH = 50;
-const PIPE_GAP = 125;
+const PIPE_GAP = 100;
 
 // Bird variables
 let birdX = 50;
@@ -35,7 +35,7 @@ let scored = false;
 
 // lets us control the bird with the space key
 document.body.onkeyup = function(e) {
-    if (e.code == 'Space') {
+    if (e.code == 'Space','W') {
         birdVelocity = FLAP_SPEED;
     }
 }
