@@ -5,7 +5,7 @@ const ctx = canvas.getContext("2d");
 const gameContainer = document.getElementById('game-container');
 
 const flappyImg = new Image();
-flappyImg.src = 'assets/flappy_dunk.png';
+flappyImg.src = 'assets/tai-bird.png';
 
 //Game constants
 const FLAP_SPEED = -5;
@@ -15,7 +15,7 @@ const PIPE_WIDTH = 50;
 const PIPE_GAP = 125;
 
 // Bird variables
-let birdX = 50;
+let birdX = 52;
 let birdY = 50;
 let birdVelocity = 0;
 let birdAcceleration = 0.1;
@@ -51,9 +51,9 @@ document.getElementById('restart-button').addEventListener('click', function() {
 
 function increaseScore() {
     // increase now our counter when our flappy passes the pipes
-    if(birdX > pipeX + PIPE_WIDTH && 
-        (birdY < pipeY + PIPE_GAP || 
-          birdY + BIRD_HEIGHT > pipeY + PIPE_GAP) && 
+    if(birdX > pipeX + PIPE_WIDTH &&
+        (birdY < pipeY + PIPE_GAP ||
+          birdY + BIRD_HEIGHT > pipeY + PIPE_GAP) &&
           !scored) {
         score++;
         scoreDiv.innerHTML = score;
@@ -130,7 +130,7 @@ function showEndMenu () {
     document.getElementById('best-score').innerHTML = highScore;
 }
 
-// we reset the values to the beginning so we start 
+// we reset the values to the beginning so we start
 // with the bird at the beginning
 function resetGame() {
     birdX = 50;
